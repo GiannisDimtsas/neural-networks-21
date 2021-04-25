@@ -60,9 +60,10 @@ for train, test in kfold.split(inputs, targets):
     print(history.history)
 
 
-plt.plot(history.history['accuracy'])
+plt.plot(history.history['loss'])
+plt.plot(history.history['val_loss'])
 plt.title('Model loss')
-plt.ylabel('accuracy')
+plt.ylabel('loss')
 plt.xlabel('Epoch')
 plt.legend(['Train', 'Test'], loc='upper right')
 plt.show()

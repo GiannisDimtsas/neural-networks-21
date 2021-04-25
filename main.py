@@ -47,7 +47,7 @@ for train, test in kfold.split(inputs, targets):
     #create optimizer with different learning rates and momentum
     optimizer = tf.keras.optimizers.SGD(learning_rate=0.1, momentum=0.6)
 
-    model.compile(optimizer=optimizer, loss='sparse_categorical_crossentropy', metrics=[scce,mse])
+    model.compile(optimizer=optimizer, loss='sparse_categorical_crossentropy', metrics=[scce,mse,'accuracy'])
 
     print('------------------------------------------------------------------------')
     print(f'Fold No. {fold_number}')
